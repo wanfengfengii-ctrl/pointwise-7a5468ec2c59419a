@@ -170,5 +170,9 @@ if __name__ == "__main__":
         asyncio.run(verify())
     elif mode == "demo":
         asyncio.run(demo())
+    elif mode == "all":
+        asyncio.run(verify())
+        import boundaries
+        boundaries.verify()
     else:
-        raise SystemExit("usage: python3 checks.py verify|demo")
+        raise SystemExit("usage: python3 checks.py verify|demo|all")
